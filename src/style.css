@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		outline-color: #5755ff;
+	}
+}
+
+@layer components {
+	[data-tools-dropdown-toggler] {
+		& > * {
+			@apply mb-[0.35em] w-full bg-black h-px rounded transition-all duration-300	origin-left;
+		}
+		&.active {
+			& div:nth-child(1) {
+				@apply rotate-[40deg];
+			}
+			& div:nth-child(2) {
+				@apply -translate-x-1 opacity-0;
+			}
+			& div:nth-child(3) {
+				@apply -rotate-[40deg];
+			}
+		}
+	}
+}
